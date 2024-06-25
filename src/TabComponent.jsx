@@ -15,7 +15,7 @@ function TabComponent() {
         style={{
           display: "flex",
           textDecoration: "none",
-          alignItems: "center",
+          // alignItems: "center",
           justifyContent: "space-between",
           padding: "20px",
           marginBottom: "20px",
@@ -44,8 +44,6 @@ function TabComponent() {
         style={{
           maxHeight: "100%",
           display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
           overflow: "scroll",
           padding: "20px",
         }}

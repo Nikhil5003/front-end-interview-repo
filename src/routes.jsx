@@ -7,6 +7,7 @@ import PaginationComponent from "./components/PaginationComponent";
 import InfiniteScroll from "./components/InfiniteScroll";
 import TicTacToe from "./components/TicTacToe";
 import TabComponent from "./TabComponent";
+import Accordion from "./components/Accordion";
 
 const routes = createBrowserRouter([
   {
@@ -34,7 +35,15 @@ const routes = createBrowserRouter([
         path: "/tabComponent/tictactoe",
         element: <TicTacToe />,
       },
+      {
+        path: "/tabComponent/accordion",
+        element: <Accordion />,
+      },
     ],
+  },
+  {
+    path: "*",
+    element: <Navigate to="/tabComponent/countdown" replace />,
   },
 ]);
 export default routes;
