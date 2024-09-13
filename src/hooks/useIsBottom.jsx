@@ -1,9 +1,9 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
-function useIsBottom(ref) {
+function useIsBottom() {
   const [isBottom, setIsBottom] = useState(false);
-
+  const ref = useRef(null);
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -24,10 +24,11 @@ function useIsBottom(ref) {
       if (ref?.current) {
         observer.unobserve(ref?.current);
       }
+      observer.disconnect();
     };
-  }, [ref?.current]);
+  }, [ref.current]);
 
-  return { isBottom };
+  return { isBottom, ref };
 }
 
 export default useIsBottom;

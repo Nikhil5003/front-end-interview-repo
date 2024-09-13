@@ -25,7 +25,6 @@ function countOccurences(array) {
       if (array[j].includes(array[i] && j !== i)) {
         count++;
       }
-      p;
     }
     result[array[i]] = count;
   }
@@ -34,7 +33,7 @@ function countOccurences(array) {
 
 console.log(countOccurences(URLs));
 //second solution
-const aggregate = URLs.reduce((acc, currStr, index, array) => {
+export const aggregate = URLs.reduce((acc, currStr, index, array) => {
   // to track the count of occurrences of the current string
   let count = 0;
 

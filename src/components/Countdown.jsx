@@ -1,5 +1,6 @@
 import React from "react";
 import useCountdown from "../hooks/useCountdown";
+import useHasFocus from "../hooks/useHasFocus";
 
 export default function Countdown() {
   const startTime = Date.now();
