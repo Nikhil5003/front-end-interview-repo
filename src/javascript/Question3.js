@@ -1,4 +1,4 @@
-function chopArr(arr, k) {
+export function chopArr(arr, k) {
   // your code goes here
   let res = [];
   if (!k || k >= arr.length) return [arr];

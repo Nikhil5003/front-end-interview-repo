@@ -33,7 +33,7 @@
 // 10
 // "success:2,4,6,8,10" // this will be printed immediately after last
 
-const mapSeries = (arr, fn) => {
+export const mapSeries = (arr, fn) => {
   return new Promise((resolve, reject) => {
     const final = arr.reduce((a, b) => {
       return a.then((val) => {
