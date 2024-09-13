@@ -1,25 +1,25 @@
 import { useEffect, useState } from "react";
 import useDebounceWithFunction from "./useDebounce";
 
-function useScrollPercentage() {
+function useScrollPercentage(ref) {
   const [percentage, setPercentage] = useState(0);
   const onScroll = () => {
-    const scrollTop = document.documentElement.scrollTop;
+    const scrollTop = ref.current.scrollTop;
     const remainingHeightToScroll =
-      document.documentElement.scrollHeight -
-      document.documentElement.clientHeight;
-
+      ref.current.scrollHeight - ref.current.clientHeight;
     const scrolledPercentage = (scrollTop / remainingHeightToScroll) * 100;
     setPercentage(scrolledPercentage);
   };
   const debouncedFunction = useDebounceWithFunction(onScroll, 100);
   useEffect(() => {
-    document.documentElement.addEventListener("scroll", debouncedFunction);
+    ref.current.addEventListener("scroll", onScroll);
 
     return () => {
-      document.documentElement.removeEventListener("scroll", debouncedFunction);
+      if (ref?.current) {
+        ref?.current?.removeEventListener("scroll", onScroll);
+      }
     };
-  });
+  }, [ref, debouncedFunction]);
 
   return percentage;
 }
