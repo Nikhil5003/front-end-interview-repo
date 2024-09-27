@@ -1,29 +1,37 @@
-// localstorage with expiry
 window.myLocalStorage = {
   getItem(key) {
-    const result = JSON.parse(window.localStorage.getItem(key));
-    if (result) {
-      if (result.expiryTime <= Date.now()) {
-        window.localStorage.removeItem(key);
-        return null;
+    const item = JSON.parse(localStorage.getItem(key));
+    if (item) {
+      if (item.expiryTime) {
+        if (Date.now() > item.expiryTime) {
+          window.localStorage.removeItem(key);
+          return null;
+        }
+        return item[key];
       }
-      return result.data;
+      return item[key];
     }
     return null;
   },
-  setItem(key, value, expiryTime = 2000) {
-    let result = {
-      data: value,
-    };
+
+  setItem(key, value, expiryTime) {
+    let data = {};
     if (expiryTime) {
-      result.expiryTime = Date.now() + expiryTime;
+      data["expiryTime"] = Date.now() + expiryTime;
     }
-    window.localStorage.setItem(key, JSON.stringify(result));
+    if (key && value) {
+      data[key] = value;
+    }
+    if (expiryTime !== 0) {
+      localStorage.setItem(key, JSON.stringify(data));
+    }
   },
-  removeItem: (key) => {
-    window.localStorage.removeItem(key);
+
+  removeItem(key) {
+    localStorage.removeItem(key);
   },
+
   clear() {
-    window.localStorage.clear();
+    localStorage.clear();
   },
 };

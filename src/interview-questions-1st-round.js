@@ -188,8 +188,8 @@
 // }
 
 // var person2 = { age: 24 }
-// console.log(person.getAge.call(person2)) //24
-// console.log(person.getAge2.call(person2)) //undefined
+// console.log(person.getAge.call(person2))
+// console.log(person.getAge2.call(person2))
 
 //prototype chaining is below
 
