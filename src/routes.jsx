@@ -8,6 +8,7 @@ import InfiniteScroll from "./components/InfiniteScroll";
 import TicTacToe from "./components/TicTacToe";
 import TabComponent from "./TabComponent";
 import Accordion from "./components/Accordion";
+import Comments from "./CommentSystem/Comments";
 
 const routes = createBrowserRouter([
   {
@@ -38,6 +39,10 @@ const routes = createBrowserRouter([
       {
         path: "/tabComponent/accordion",
         element: <Accordion />,
+      },
+      {
+        path: "/tabComponent/comments",
+        element: <Comments />,
       },
     ],
   },

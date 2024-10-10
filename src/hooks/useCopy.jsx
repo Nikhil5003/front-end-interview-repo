@@ -8,7 +8,6 @@ function useCopy() {
     }
     try {
       await navigator.clipboard.writeText(text);
-
       setCopiedText(text);
     } catch (err) {
       console.log(err.message);
