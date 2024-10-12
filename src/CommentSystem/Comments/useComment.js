@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { initialCommentsData } from "../../constants";
 
 function useComment() {
@@ -12,7 +12,7 @@ function useComment() {
         if (comment.id === targetId) {
           // Add the new sub-comment to the subComments array
           comment.subComments.push({
-            id: targetId + 1, // For simplicity, increase the ID (you could make it more unique)
+            id: Math.ceil(Math.random() * 10000 + 1), // For simplicity, increase the ID (you could make it more unique)
             comment: newComment,
             subComments: [],
           });
@@ -78,7 +78,7 @@ function useComment() {
       {
         comment: "hi nikhil and sonika",
         subComments: [],
-        id: Math.ceil(Math.random() * 10),
+        id: Math.ceil(Math.random() * 10000),
       },
     ]);
   };
