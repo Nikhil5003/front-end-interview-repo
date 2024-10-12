@@ -5,3 +5,15 @@
 // }
 
 //Example is connect in redux where we connect the component to redux with some states and actions
+
+//connect(mapStateToProps, userActions)(MyComponent) => connect(a,v) return a function which accept a component (MyComponent)
+
+//Pseudo code for connect
+
+// export function connect(a, b) {
+//   return function connectRedux(Component) {
+//     return <Component a={a} b={b} />;
+//   };
+// }
+
+//this is a closure implementaion
