@@ -9,6 +9,7 @@ import TicTacToe from "./components/TicTacToe";
 import TabComponent from "./TabComponent";
 import Accordion from "./components/Accordion";
 import Comments from "./CommentSystem/Comments";
+import CheckBoxSystem from "./CheckboxDesign/CheckBox";
 
 const routes = createBrowserRouter([
   {
@@ -43,6 +44,10 @@ const routes = createBrowserRouter([
       {
         path: "/tabComponent/comments",
         element: <Comments />,
+      },
+      {
+        path: "/tabComponent/checkBox",
+        element: <CheckBoxSystem />,
       },
     ],
   },

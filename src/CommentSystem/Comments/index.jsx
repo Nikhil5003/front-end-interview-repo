@@ -1,7 +1,6 @@
 import React from "react";
 import useComment from "./useComment";
 import CommentItem from "./CommentItem";
-import { Button } from "@mui/material";
 
 function Comments() {
   const {

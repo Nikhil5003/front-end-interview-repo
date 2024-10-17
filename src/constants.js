@@ -31,6 +31,10 @@ export const tabData = [
     id: "comments",
     label: "Comment System",
   },
+  {
+    id: "checkBox",
+    label: "CheckBox System",
+  },
 ];
 
 export const questionAnswers = [
@@ -84,5 +88,41 @@ export const initialCommentsData = [
     id: 5,
     comment: "Lorem ipsum 6",
     subComments: [],
+  },
+];
+
+export const checkBoxData = [
+  {
+    id: 0,
+    label: "A",
+    checked: false,
+    children: [
+      {
+        id: 1,
+        label: "B",
+        checked: false,
+        children: [],
+      },
+      {
+        id: 2,
+        label: "C",
+        checked: false,
+        children: [
+          { id: 3, label: "D", checked: false, children: [] },
+          {
+            id: 4,
+            label: "E",
+            checked: false,
+            children: [],
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 5,
+    label: "F",
+    children: [],
+    checked: false,
   },
 ];
