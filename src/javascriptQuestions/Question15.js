@@ -2,8 +2,8 @@ import axios from "axios";
 
 export function cachedApiCall(delay) {
   let obj = {}; // Cache object to store response and time
-  let initialTime = Date.now() + delay;
-  return function () {
+  let initialTime = 0;
+  return function cachedFunction() {
     const currentTime = Date.now();
     if (currentTime > initialTime || !obj["apiUrl"]) {
       return axios("apiUrl").then((res) => {
