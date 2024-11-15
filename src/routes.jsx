@@ -10,6 +10,16 @@ import TabComponent from "./TabComponent";
 import Accordion from "./components/Accordion";
 import Comments from "./CommentSystem/Comments";
 import CheckBoxSystem from "./CheckboxDesign/CheckBox";
+import Carousel from "./components/Carousel";
+
+const imageData = [
+  "https://picsum.photos/id/600/600/400",
+  "https://picsum.photos/id/100/600/400",
+  "https://picsum.photos/id/200/600/400",
+  "https://picsum.photos/id/300/600/400",
+  "https://picsum.photos/id/400/600/400",
+  "https://picsum.photos/id/500/600/400",
+];
 
 const routes = createBrowserRouter([
   {
@@ -48,6 +58,10 @@ const routes = createBrowserRouter([
       {
         path: "/tabComponent/checkBox",
         element: <CheckBoxSystem />,
+      },
+      {
+        path: "/tabComponent/carousel",
+        element: <Carousel data={imageData} />,
       },
     ],
   },

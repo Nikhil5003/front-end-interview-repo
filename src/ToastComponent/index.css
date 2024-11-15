@@ -1,0 +1,39 @@
+.toast-container{
+    display: flex;
+    gap:20px;
+}
+
+.item{
+    background-color: #b72727;
+    color: green;
+    height: 30px;
+    margin-block-end: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.toast{
+    animation: fadeInOut 5s ease forwards;
+}
+
+@keyframes fadeInOut {
+    0% {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+    10% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    90% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+  }

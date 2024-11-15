@@ -35,6 +35,10 @@ export const tabData = [
     id: "checkBox",
     label: "CheckBox System",
   },
+  {
+    id: "carousel",
+    label: "Carousel",
+  },
 ];
 
 export const questionAnswers = [

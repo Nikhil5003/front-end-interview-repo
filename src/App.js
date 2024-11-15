@@ -2,6 +2,8 @@ import "./App.css";
 import React, { useRef } from "react";
 import { RouterProvider } from "react-router-dom";
 import routes from "./routes";
+import ToastComponent from "./ToastComponent";
+import MultiSearchComponent from "./MultiSelectSearch";
 
 function App() {
   const ref = useRef(null);
@@ -15,7 +17,9 @@ function App() {
         height: "100%",
       }}
     >
-      <RouterProvider router={routes} />
+      {/* <RouterProvider router={routes} /> */}
+      {/* <ToastComponent /> */}
+      <MultiSearchComponent />
     </div>
   );
 }

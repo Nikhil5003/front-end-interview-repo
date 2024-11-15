@@ -30,6 +30,7 @@ const useCheckBox = () => {
   };
 
   const onChecked = (id, currentChecked) => {
+    // negate current status
     const newChecked = !currentChecked;
     setData(updateTree(data, id, newChecked));
   };
