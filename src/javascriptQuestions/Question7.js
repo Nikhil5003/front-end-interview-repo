@@ -16,6 +16,9 @@ export const calculator = {
     this.total *= val;
     return this;
   },
+  final() {
+    return this.total;
+  },
 };
 
 export const ComputeAmount = function () {

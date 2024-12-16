@@ -18,7 +18,7 @@ function App() {
       }}
     >
       {/* <RouterProvider router={routes} /> */}
-      {/* <ToastComponent /> */}
+      <ToastComponent />
       <MultiSearchComponent />
     </div>
   );

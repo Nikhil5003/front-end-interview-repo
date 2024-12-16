@@ -3,7 +3,6 @@ import useCarousel from "../hooks/useCarousel";
 
 function Carousel({ data }) {
   const { activeIndex, onNext, onPrev, onDotClick } = useCarousel(data.length);
-  console.log({ activeIndex });
   return (
     <div
       style={{

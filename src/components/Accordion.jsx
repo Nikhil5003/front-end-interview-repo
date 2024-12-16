@@ -29,7 +29,11 @@ function QuestionAnswerComponent({ question, answer }) {
         <div>{question}</div>
         <ExpandMoreIcon />
       </div>
-      {expand && <div style={{ fontSize: "20px" }}>{answer}</div>}
+      {expand && (
+        <div tabIndex="0" style={{ fontSize: "20px" }}>
+          {answer}
+        </div>
+      )}
     </div>
   );
 }
